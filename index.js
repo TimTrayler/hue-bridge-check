@@ -24,7 +24,7 @@ function check()
                 }
 
             }else {
-                alert('An error occurred! Please try again!');
+                alert('An error occurred! Make sure you have allowed Requests to discovery.meethue.com!');
             }
         }
     }
