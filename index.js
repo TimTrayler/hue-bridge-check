@@ -17,7 +17,7 @@ function check()
                 if(bridges.length > 0)
                 {
                     out.innerText += "\n\n\nBridges:\n";
-
+                    
                     for(var i = 0; i < bridges.length; i++)
                     {
                         out.innerText += "\n IP-Adress: \"" + bridges[i]["internalipaddress"] + "\", ID: \"" + bridges[i]["id"] + "\"\n"
@@ -25,7 +25,8 @@ function check()
                 }
 
             }else {
-                out.innerHTML = "An error occurred! Make sure you have allowed Requests to discovery.meethue.com!";
+                out.innerHTML = "<p error>An error occurred! Make sure you have allowed Requests to "
+                                + "<a href=\"https://discovery.meethue.com/\" target=\"_blank\"><code>discovery.meethue.com</code></a>!</p>";
             }
         }
     }
