@@ -6,10 +6,11 @@ function check()
     {
         if(x.readyState == x.DONE)
         {
+            var out = document.getElementById("output");
+            
             if(x.status > 199 && x.status < 300)
             {
                 var bridges = JSON.parse(x.responseText);
-                var out = document.getElementById("output");
                 
                 out.innerHTML = "You have " + bridges.length + " bridge " + ((bridges.length > 1 || bridges.length < 1) ? "s" : "") + " in your Wi-Fi!";
 
@@ -24,7 +25,7 @@ function check()
                 }
 
             }else {
-                alert('An error occurred! Make sure you have allowed Requests to discovery.meethue.com!');
+                out.innerHTML = "An error occurred! Make sure you have allowed Requests to discovery.meethue.com!";
             }
         }
     }
